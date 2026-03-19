@@ -1,0 +1,71 @@
+using Microsoft.EntityFrameworkCore;
+using ParkingAllocationBackend.Data;
+using ParkingAllocationBackend.DTO;
+using ParkingAllocationBackend.Services.Interfaces;
+
+namespace ParkingAllocationBackend.Services.Implementations
+{
+    public class ParkingSpaceService : IParkingSpaceService
+    {
+        private readonly ApplicationDbContext _context;
+
+        public ParkingSpaceService(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+
+
+        public async Task<List<ParkingSpaceDto>> GetAllSpacesAsync()
+        {
+            return await _context.ParkingSpaces
+                 .Select(p => new ParkingSpaceDto
+                 {
+                     ParkingSpaceId = p.ParkingSpaceId,
+                     IsAvailable = p.IsAvaiable
+                 })
+                 .ToListAsync();
+        }
+
+        public async Task<List<ParkingSpaceDto>> GetAvailableSpacesAsync(DateTime fromDate, DateTime toDate)
+        {
+            var unavailableSpaceIds = await _context.parkingAllocations
+                 .Where(a => a.IsActive &&
+                             ((fromDate >= a.FromDate && fromDate <= a.ToDate) ||
+                              (toDate >= a.FromDate && toDate <= a.ToDate) ||
+                              (fromDate <= a.FromDate && toDate >= a.ToDate)))
+                 .Select(a => a.ParkingSpaceId)
+                 .ToListAsync();
+
+            var availableSpaces = await _context.ParkingSpaces
+                .Where(p => !unavailableSpaceIds.Contains(p.ParkingSpaceId))
+                .Select(p => new ParkingSpaceDto
+                {
+                    ParkingSpaceId = p.ParkingSpaceId,
+                    IsAvailable = true
+                })
+                .ToListAsync();
+
+            return availableSpaces;
+        }
+
+
+
+
+
+
+        public async Task<ParkingSpaceDto?> GetSpaceByIdAsync(int id)
+        {
+            var space = await _context.ParkingSpaces.FindAsync(id);
+            if (space == null) return null;
+
+            return new ParkingSpaceDto
+            {
+                ParkingSpaceId = space.ParkingSpaceId,
+                IsAvailable = space.IsAvaiable
+            };
+        }
+
+        
+    }
+}

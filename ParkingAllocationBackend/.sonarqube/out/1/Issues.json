@@ -1,0 +1,618 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.14.0.0",
+        "fileVersion": "4.14.0-3.25262.10 (8edf7bcd)",
+        "semanticVersion": "4.14.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable field '_userService' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/UserServiceTests.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 29,
+                  "endLine": 12,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/UserServiceTests.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 29,
+                  "endLine": 12,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable field '_context' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/UserServiceTests.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 38,
+                  "endLine": 13,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/UserServiceTests.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 38,
+                  "endLine": 13,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/ParkingAllocationServiceTests.cs",
+                "region": {
+                  "startLine": 100,
+                  "startColumn": 28,
+                  "endLine": 100,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable field '_context' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/ParkingAllocationServiceTests.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 38,
+                  "endLine": 12,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/ParkingAllocationServiceTests.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 38,
+                  "endLine": 12,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable field '_service' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/ParkingAllocationServiceTests.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 42,
+                  "endLine": 13,
+                  "endColumn": 50
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/ParkingAllocationServiceTests.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 42,
+                  "endLine": 13,
+                  "endColumn": 50
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable field '_context' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/AuthServiceTests.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 38,
+                  "endLine": 15,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/AuthServiceTests.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 38,
+                  "endLine": 15,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable field '_authService' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/AuthServiceTests.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 29,
+                  "endLine": 16,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/AuthServiceTests.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 29,
+                  "endLine": 16,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable field '_configurationMock' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/AuthServiceTests.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 38,
+                  "endLine": 17,
+                  "endColumn": 56
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/AuthServiceTests.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 38,
+                  "endLine": 17,
+                  "endColumn": 56
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable field '_context' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/ParkingSpaceServiceTests.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 38,
+                  "endLine": 11,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/ParkingSpaceServiceTests.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 38,
+                  "endLine": 11,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable field '_service' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/ParkingSpaceServiceTests.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 37,
+                  "endLine": 12,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/ParkingSpaceServiceTests.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 37,
+                  "endLine": 12,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/VehicleServiceTests.cs",
+                "region": {
+                  "startLine": 106,
+                  "startColumn": 84,
+                  "endLine": 106,
+                  "endColumn": 106
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8620",
+          "level": "warning",
+          "message": "Argument of type 'ISetup<IVehicleService, Task<GetAllVehicleDto>>' cannot be used for parameter 'mock' of type 'IReturns<IVehicleService, Task<GetAllVehicleDto?>>' in 'IReturnsResult<IVehicleService> ReturnsExtensions.ReturnsAsync<IVehicleService, GetAllVehicleDto?>(IReturns<IVehicleService, Task<GetAllVehicleDto?>> mock, GetAllVehicleDto? value)' due to differences in the nullability of reference types.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/VehicleServiceTests.cs",
+                "region": {
+                  "startLine": 106,
+                  "startColumn": 13,
+                  "endLine": 106,
+                  "endColumn": 70
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable field '_vehicleServiceMock' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/VehicleServiceTests.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 39,
+                  "endLine": 14,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/VehicleServiceTests.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 39,
+                  "endLine": 14,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable field '_controller' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/VehicleServiceTests.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 35,
+                  "endLine": 15,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/VehicleServiceTests.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 35,
+                  "endLine": 15,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2699",
+          "level": "warning",
+          "message": "Add at least one assertion to this test case.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Test1.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 21,
+                  "endLine": 7,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "MSTEST0006",
+          "level": "note",
+          "message": "Prefer 'Assert.ThrowsException/ThrowsExceptionAsync' over '[ExpectedException]'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/ParkingAllocationServiceTests.cs",
+                "region": {
+                  "startLine": 107,
+                  "startColumn": 27,
+                  "endLine": 107,
+                  "endColumn": 81
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3431",
+          "level": "warning",
+          "message": "Replace the 'ExpectedException' attribute with a throw assertion or a try/catch block.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/MySoleraCodes/ParkingAllocationBackend.Tests/Services/ParkingAllocationServiceTests.cs",
+                "region": {
+                  "startLine": 106,
+                  "startColumn": 10,
+                  "endLine": 106,
+                  "endColumn": 90
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CS8600": {
+          "id": "CS8600",
+          "shortDescription": "Converting null literal or possible null value to non-nullable type.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8600)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8602": {
+          "id": "CS8602",
+          "shortDescription": "Dereference of a possibly null reference.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8602)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8620": {
+          "id": "CS8620",
+          "shortDescription": "Argument cannot be used for parameter due to differences in the nullability of reference types.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8620)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "MSTEST0006": {
+          "id": "MSTEST0006",
+          "shortDescription": "Avoid '[ExpectedException]'",
+          "fullDescription": "Prefer 'Assert.ThrowsException' or 'Assert.ThrowsExceptionAsync' over '[ExpectedException]' as it ensures that only the expected call throws the expected exception. The assert APIs also provide more flexibility and allow you to assert extra properties of the exeption.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/core/testing/mstest-analyzers/mstest0006",
+          "properties": {
+            "category": "Design",
+            "isEnabledByDefault": true
+          }
+        },
+        "S2699": {
+          "id": "S2699",
+          "shortDescription": "Tests should include assertions",
+          "fullDescription": "The rule targets test methods that lack an assertion and consist solely of an action and, optionally, a setup.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2699",
+          "properties": {
+            "category": "Blocker Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S3431": {
+          "id": "S3431",
+          "shortDescription": "\"[ExpectedException]\" should not be used",
+          "fullDescription": "It should be clear to a casual reader what code a test is testing and what results are expected. Unfortunately, that’s not usually the case with the ExpectedException attribute since an exception could be thrown from almost any line in the method.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3431",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

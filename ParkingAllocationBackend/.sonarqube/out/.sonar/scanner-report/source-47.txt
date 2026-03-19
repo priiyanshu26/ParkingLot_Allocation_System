@@ -1,0 +1,12 @@
+using ParkingAllocationBackend.DTO;
+
+namespace ParkingAllocationBackend.Services.Interfaces
+{
+    public interface IParkingSpaceService
+    {
+        Task<List<ParkingSpaceDto>> GetAllSpacesAsync();
+        Task<ParkingSpaceDto?> GetSpaceByIdAsync(int id);
+        Task<List<ParkingSpaceDto>> GetAvailableSpacesAsync(DateTime fromDate, DateTime toDate);
+      
+    }
+}

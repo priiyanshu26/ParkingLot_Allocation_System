@@ -1,0 +1,13 @@
+|
+qC:\MySoleraCodes\ParkingAllocationBackend.Tests\obj\Debug\net8.0\ParkingAllocationBackend.Tests.GlobalUsings.g.csutf-8z
+oC:\MySoleraCodes\ParkingAllocationBackend.Tests\obj\Debug\net8.0\ParkingAllocationBackend.Tests.AssemblyInfo.csutf-8z
+oC:\MySoleraCodes\ParkingAllocationBackend.Tests\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8ç
+ÅC:\Users\Priyanshu.Barsagade\.nuget\packages\microsoft.net.test.sdk\17.12.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.csutf-8A
+8C:\MySoleraCodes\ParkingAllocationBackend.Tests\Test1.csutf-8X
+OC:\MySoleraCodes\ParkingAllocationBackend.Tests\Services\VehicleServiceTests.csutf-8U
+LC:\MySoleraCodes\ParkingAllocationBackend.Tests\Services\UserServiceTests.csutf-8]
+TC:\MySoleraCodes\ParkingAllocationBackend.Tests\Services\ParkingSpaceServiceTests.csutf-8b
+YC:\MySoleraCodes\ParkingAllocationBackend.Tests\Services\ParkingAllocationServiceTests.csutf-8U
+LC:\MySoleraCodes\ParkingAllocationBackend.Tests\Services\AuthServiceTests.csutf-8J
+AC:\MySoleraCodes\ParkingAllocationBackend.Tests\MSTestSettings.csutf-8K
+BC:\MySoleraCodes\ParkingAllocationBackend.Tests\gitignoreClass1.csutf-8

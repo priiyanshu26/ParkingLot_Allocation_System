@@ -1,0 +1,47 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using ParkingAllocationBackend.DTO;
+using ParkingAllocationBackend.Services.Interfaces;
+
+namespace ParkingAllocationBackend.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    [Authorize]
+    public class ParkingSpaceController:ControllerBase
+    {
+        private readonly IParkingSpaceService _parkingSpaceService;
+
+        public ParkingSpaceController(IParkingSpaceService parkingSpaceService)
+        {
+            _parkingSpaceService = parkingSpaceService;
+        }
+        [HttpGet]
+        public async Task<ActionResult<List<ParkingSpaceDto>>> GetAllSpaces()
+        {
+            var spaces = await _parkingSpaceService.GetAllSpacesAsync();
+            return Ok(spaces);
+        }
+
+        [HttpGet("available")]
+        [Authorize(Roles = "Admin,User")]
+        public async Task<ActionResult<List<ParkingSpaceDto>>> GetAvailableSpaces([FromQuery] DateTime fromDate, [FromQuery] DateTime toDate)
+        {
+            if (fromDate >= toDate)
+                return BadRequest("FromDate must be earlier than ToDate.");
+
+            var availableSpaces = await _parkingSpaceService.GetAvailableSpacesAsync(fromDate, toDate);
+            return Ok(availableSpaces);
+        }
+        [HttpGet("{id}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult<ParkingSpaceDto>> GetSpaceById(int id)
+        {
+            var space = await _parkingSpaceService.GetSpaceByIdAsync(id);
+            if (space == null)
+                return NotFound();
+
+            return Ok(space);
+        }
+    }
+}

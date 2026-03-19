@@ -1,0 +1,1 @@
+C:\MySoleraCodes\ParkingAllocationBackend\.sonarqube\out\1
