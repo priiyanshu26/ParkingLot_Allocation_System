@@ -1,0 +1,126 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using ParkingAllocationBackend.Auth;
+using ParkingAllocationBackend.BackgroundServices;
+using ParkingAllocationBackend.Data;
+using ParkingAllocationBackend.Models;
+using ParkingAllocationBackend.Services.Implementation;
+using ParkingAllocationBackend.Services.Implementations;
+using ParkingAllocationBackend.Services.Interfaces;
+using System.Text;
+
+namespace ParkingAllocationBackend
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        { 
+            var builder = WebApplication.CreateBuilder(args);
+
+            
+
+            builder.Services.AddControllers();
+            
+            builder.Services.AddEndpointsApiExplorer();
+            
+           
+
+            builder.Services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new() { Title = "ParkingLot API", Version = "v1" });
+
+                options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "Enter 'Bearer {token}'"
+                });
+
+                options.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        Array.Empty<string>()
+                    }
+                });
+            });
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+               options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+            var jwtKey = builder.Configuration["Jwt:Key"];
+            var jwtIssuer = builder.Configuration["Jwt:Issuer"];
+            
+            var keyBytes = Encoding.UTF8.GetBytes(jwtKey);
+
+            builder.Services.AddAuthentication("Bearer")
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                        ValidateAudience = false,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(
+                            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+                    };
+                });
+
+            builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IVehicleService, VehicleService>();
+            builder.Services.AddScoped<IParkingSpaceService, ParkingSpaceService>();
+            builder.Services.AddScoped<IParkingAllocationService, ParkingAllocationService>();
+            builder.Services.AddHostedService<ExpiredAllocationChecker>();
+
+            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+            
+
+            var app = builder.Build();
+            using (var scope = app.Services.CreateScope())
+            {
+                var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+                if (!db.ParkingSpaces.Any())
+                {
+                    for (int i = 1; i <= 20; i++)
+                    {
+                        db.ParkingSpaces.Add(new ParkingSpace { IsAvaiable = true });
+                    }
+                    db.SaveChanges();
+                }
+            }
+
+            
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+
+
+            app.UseHttpsRedirection();
+
+            app.UseAuthentication(); 
+           
+            app.UseAuthorization();
+
+            app.MapControllers();
+
+            app.Run();
+        }
+    }
+}

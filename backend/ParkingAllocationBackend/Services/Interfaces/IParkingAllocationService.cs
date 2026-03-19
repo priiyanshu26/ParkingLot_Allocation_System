@@ -1,0 +1,13 @@
+﻿
+using ParkingAllocationBackend.DTO;
+
+namespace ParkingAllocationBackend.Services.Interfaces
+{
+    public interface IParkingAllocationService
+    {
+        Task<List<ParkingAllocationDto>> GetAllAllocationsAsync();
+        Task<ParkingAllocationDto?> GetAllocationByIdAsync(int id);
+        Task<ParkingAllocationDto> CreateAllocationAsync(CreateParkingAllocationDto dto);
+        Task UpdateExpiredAllocationsAsync();
+    }
+}
